@@ -114,6 +114,58 @@
 	}	
   },
   
+// for German 
+"hyprland/workspaces#ger": {
+	"active-only":false,
+	"all-outputs": true,
+	"format": "{icon}",
+	"show-special": false,
+	"on-click": "activate",
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent-workspaces": {
+      "*": 5
+	},
+		"format-icons": {
+		"1": "Eins",
+		"2": "Zwei",
+		"3": "Drei",
+		"4": "Vier",
+		"5": "Fünf",
+		"6":"Sechs",
+		"7":"Sieben",
+		"8":"Acht",
+		"9":"Nuen",
+		"10":"Zehn"
+	}	
+  },
+
+// for Croissant Country 
+"hyprland/workspaces#fra": {
+	"active-only":false,
+	"all-outputs": true,
+	"format": "{icon}",
+	"show-special": false,
+	"on-click": "activate",
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent-workspaces": {
+      "*": 5
+	},
+		"format-icons": {
+		"1": "Un",
+		"2": "Deux",
+		"3": "Trois",
+		"4": "Quatre",
+		"5": "Cinq",
+		"6":"Six",
+		"7":"Sept",
+		"8":"Huit",
+		"9":"Nuef",
+		"10":"Dix"
+	}	
+  },
+  
 //  NUMBERS and ICONS style
 "hyprland/workspaces#4": {
 	"format": "{name}",

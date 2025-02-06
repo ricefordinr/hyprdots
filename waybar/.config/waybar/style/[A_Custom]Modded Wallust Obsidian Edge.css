@@ -13,7 +13,7 @@ font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
 window#waybar {
-    background: black;
+    background: #000000;
 	border-radius: 0px;
 }
 
@@ -79,8 +79,8 @@ tooltip label {
 #workspaces button:hover {
     color: @color9;
     border-radius: 15px;
- 	padding-left: 2px;
-    padding-right: 2px;
+ 	/*padding-left: 2px;*/
+ 	/*  padding-right: 2px;*/
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
@@ -194,4 +194,17 @@ tooltip label {
     border-color: @color12;
 	min-height: 10px;
 	border-radius: 5px;
+}
+
+#custom-archicon {
+    font-size: 24;
+    color: @color12;
+    /*background-image: url('/home/rice/dotfiles/misc/assets/archlinux-icon.png');*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 20px; */
+    transition: all 0.5s;
+}
+#custom-archicon:hover {
+    color: #74c7ec;
 }

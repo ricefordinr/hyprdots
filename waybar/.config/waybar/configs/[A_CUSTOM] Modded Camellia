@@ -30,7 +30,9 @@
 	"custom/separator#line",
 	"wlr/taskbar"],
 
-"modules-center": ["hyprland/window"], 
+"modules-center": [
+    //"hyprland/window",
+    "custom/archicon"], 
 	
 "modules-right": [
 	"custom/backlight",
@@ -39,8 +41,9 @@
 	"pulseaudio/slider",
 	"custom/separator#line",
 	"custom/swaync",
-	"tray", 
 	"battery",
+	"custom/separator#line",
+	"tray", 
 	"custom/separator#line",
 	"clock#3"],
 
@@ -70,4 +73,10 @@
 	"interval": 1,
 	"format": "{}"
 },
+
+"custom/archicon": {
+    "format": " 󰣇 ",
+    "tooltip": false
+}
+
 }
