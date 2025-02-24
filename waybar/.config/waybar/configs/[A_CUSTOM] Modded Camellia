@@ -26,26 +26,28 @@
 //"margin-right": 0,
 	
 "modules-left": [
-	"hyprland/workspaces#cam",
-	"custom/separator#line",
-	"wlr/taskbar"],
+	"clock#3",
+    "custom/separator#line",
+	"hyprland/workspaces#ger"
+    ],
 
 "modules-center": [
     //"hyprland/window",
     "custom/archicon"], 
 	
 "modules-right": [
-	"custom/backlight",
+    "tray",
+    "custom/separator#line",
+	// "custom/backlight", //
+    "backlight",
 	"backlight/slider",
-	"custom/speaker",
+	// "custom/speaker",//
+    "pulseaudio",
 	"pulseaudio/slider",
 	"custom/separator#line",
 	"custom/swaync",
 	"battery",
-	"custom/separator#line",
-	"tray", 
-	"custom/separator#line",
-	"clock#3"],
+],
 
 // Additional modules //
 "pulseaudio/slider": {
@@ -76,7 +78,8 @@
 
 "custom/archicon": {
     "format": " 󰣇 ",
-    "tooltip": false
+    "tooltip": false,
+	"on-click": "swaync-client -t -sw"
 }
 
 }

@@ -1,67 +1,79 @@
 /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* Wallust - Box type */
+/* Dark - Obsidian Edge */
 
 @import "../../.config/waybar/wallust/colors-waybar.css";
 
 * {
-  font-family: "JetBrainsMono Nerd Font";
+  font-family: "JetBrainsMonoNL Nerd Font";
   font-weight: bold;
   min-height: 0;
   /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-  font-size: 97%;
+  font-size: 99%;
   font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
 window#waybar {
-  background: transparent;
+  background: #11111b;
+  border-radius: 0px;
 }
 
 window#waybar.hidden {
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
-window#waybar.empty,
-window#waybar.empty #window {
-  background-color: transparent;
-  padding: 0px;
-  border: 0px;
+tooltip {
+  color: @foreground;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
 }
 
-#window {
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 0px;
-  transition: none;
-  color: transparent;
-  background: transparent;
+tooltip label {
+  color: @foreground;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+/*-----module groups----*/
+.modules-left,
+.modules-center,
+.modules-right {
+  border: 0px solid #b4befe;
+  border-radius: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 4px;
+  padding-left: 4px;
 }
 
 #taskbar button,
 #workspaces button {
-  color: @foreground;
+  color: @color12;
+  font-weight: 900;
   box-shadow: none;
   text-shadow: none;
-  padding: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
   border-radius: 9px;
-  padding-left: 4px;
-  padding-right: 4px;
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button.active,
 #workspaces button.active {
-  color: @color12;
-  background-color: @foreground;
-  padding-left: 4px;
+  color: @foreground;
+  background: @color12;
+  text-shadow: 2px 2px #11111b;
+  border-radius: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 8px;
   padding-right: 8px;
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
-#taskbar button.focused,
 #workspaces button.focused {
-  color: @color4;
+  color: #d8dee9;
 }
 
 #workspaces button.urgent {
@@ -71,9 +83,11 @@ window#waybar.empty #window {
 
 #taskbar button:hover,
 #workspaces button:hover {
-  color: @color4;
-  padding-left: 2px;
-  padding-right: 8px;
+  /*color: @color9;*/
+  border-color: @color12;
+  border-radius: 15px;
+  /*padding-left: 2px;*/
+  /*  padding-right: 2px;*/
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
@@ -131,21 +145,29 @@ window#waybar.empty #window {
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.sunnyDay {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 8px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: @foreground;
-  background: @color0;
-  border-bottom-width: 5px;
-  border-bottom-color: @color12;
-  border-bottom-style: solid;
+  color: @color12;
+  border-radius: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 6px;
+  padding-left: 6px;
 }
 
-#custom-power {
-  padding-right: 2px;
+#tray {
+  background-color: @color12;
+  border-radius: 12px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#temperature.critical {
+  background-color: #ff0000;
+}
+
+@keyframes blink {
+  to {
+    color: #000000;
+  }
 }
 
 /*-----Indicators----*/
@@ -154,50 +176,23 @@ window#waybar.empty #window {
   color: #39ff14;
 }
 
-#network {
-  padding-right: 12px;
-}
-
-#temperature.critical {
-  background-color: red;
-  color: black;
-}
-
-#mpris {
-  padding-right: 2px;
-  padding-left: 8px;
-}
-#backlight {
-  padding-right: 2px;
-}
 #battery.critical:not(.charging) {
-  background-color: #ffffff;
-  color: #000000;
+  color: #f53c3c;
   animation-name: blink;
   animation-duration: 3s;
   animation-timing-function: steps(12);
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  border-bottom-width: 5px;
-  border-bottom-color: @color12;
-  border-bottom-style: solid;
-}
-
-@keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: #000000;
-  }
 }
 
 #backlight-slider slider,
 #pulseaudio-slider slider {
   min-width: 0px;
   min-height: 0px;
-  opacity: 10;
+  opacity: 0;
   background-image: none;
   border: none;
-  box-shadow: @color12;
+  box-shadow: none;
 }
 
 #backlight-slider trough,
@@ -209,6 +204,22 @@ window#waybar.empty #window {
 
 #backlight-slider highlight,
 #pulseaudio-slider highlight {
+  background-color: @color12;
+  border-color: @color12;
   min-height: 10px;
   border-radius: 5px;
+}
+
+#custom-archicon {
+  font-size: 24;
+  color: @color12;
+  /*background-image: url('/home/rice/dotfiles/misc/assets/archlinux-icon.png');*/
+  /*background-position: center;*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: 20px; */
+  transition: all 0.5s;
+}
+#custom-archicon:focus,
+#custom-archicon:hover {
+  color: #74c7ec;
 }

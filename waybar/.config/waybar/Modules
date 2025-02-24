@@ -28,13 +28,13 @@
 	"rotate": 0,
 	//"format": "{icon} {percent}%",
 	"format-icons": [
-		" ",
-		" ",
-		" ",
-		"󰃝 ",
-		"󰃞 ",
-		"󰃟 ",
-		"󰃠 "
+		"",
+		"",
+		"",
+		"󰃝",
+		"󰃞",
+		"󰃟",
+		"󰃠"
 	],
 	"format": "{icon}",
 	//"format-icons": ["","","","","","","","","","","","","","",""],
@@ -133,7 +133,7 @@
 
 "clock#3": {
     //"format": "{:%I:%M %p - %d/%b}", //for AM/PM
-    "format": "{:%H:%M - %d/%b}", // 24H
+    "format": "{:%H:%M - %a %d/%b}", // 24H
 	"tooltip": false
 },
 
@@ -313,7 +313,8 @@
 },
 
 "pulseaudio": {
-	"format": "{icon} {volume}%",
+	// "format": "{icon} {volume}%", //
+    "format": "{icon}",
 	"format-bluetooth": "{icon} 󰂰 {volume}%",
 	"format-muted": "󰖁",
 	"format-icons": {
