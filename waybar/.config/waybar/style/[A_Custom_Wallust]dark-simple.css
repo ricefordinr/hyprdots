@@ -53,7 +53,7 @@ tooltip label {
   text-shadow: none;
   padding-left: 8px;
   padding-right: 8px;
-  border-radius: 9px;
+  border-radius: 12px;
   animation: gradient_f 20s ease-in infinite;
   transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
@@ -62,10 +62,10 @@ tooltip label {
 #workspaces button.active {
   color: @foreground;
   background: @color12;
-  text-shadow: 2px 2px #11111b;
-  border-radius: 15px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  text-shadow: 1px 1px #111;
+  border-radius: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   padding-left: 8px;
   padding-right: 8px;
   animation: gradient_f 20s ease-in infinite;
@@ -78,14 +78,14 @@ tooltip label {
 
 #workspaces button.urgent {
   color: #11111b;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 #taskbar button:hover,
 #workspaces button:hover {
   /*color: @color9;*/
   border-color: @color12;
-  border-radius: 15px;
+  border-radius: 12px;
   /*padding-left: 2px;*/
   /*  padding-right: 2px;*/
   animation: gradient_f 20s ease-in infinite;
